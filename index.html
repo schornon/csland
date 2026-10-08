@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Brewed — Native Apps for iOS &amp; macOS by Serhii Chornonoh</title>
+    <meta name="description" content="CS Brewed is the indie development studio of Serhii Chornonoh. Crafting clean, focused, and privacy-first native applications for iOS and macOS, including Teeth - Dental Journal and The Surf Hero.">
+    <meta name="keywords" content="indie developer, iOS developer, macOS developer, Teeth Dental Journal, The Surf Hero, native Swift, Apple apps, CS Brewed, Serhii Chornonoh">
+    <meta name="author" content="Serhii Chornonoh">
+    <link rel="canonical" href="https://csbrewed.com/">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://csbrewed.com/">
+    <meta property="og:title" content="CS Brewed — Native Apps for iOS &amp; macOS">
+    <meta property="og:description" content="Discover native, focused, and privacy-first apps for Apple platforms crafted by indie developer Serhii Chornonoh.">
+    <meta property="og:image" content="https://csbrewed.com/assets/favicon.svg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://csbrewed.com/">
+    <meta name="twitter:title" content="CS Brewed — Native Apps for iOS &amp; macOS">
+    <meta name="twitter:description" content="Discover native, focused, and privacy-first apps for Apple platforms crafted by indie developer Serhii Chornonoh.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://csbrewed.com/#website",
+          "url": "https://csbrewed.com/",
+          "name": "CS Brewed",
+          "description": "Indie Apple platform development studio by Serhii Chornonoh",
+          "publisher": {
+            "@type": "Person",
+            "name": "Serhii Chornonoh",
+            "url": "https://github.com/schornon"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "SoftwareApplication",
+              "position": 1,
+              "name": "Teeth - Dental Journal",
+              "operatingSystem": "iOS 18.0 or later",
+              "applicationCategory": "HealthApplication",
+              "url": "https://teeth.csbrewed.com/",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "SoftwareApplication",
+              "position": 2,
+              "name": "The Surf Hero",
+              "operatingSystem": "macOS",
+              "applicationCategory": "UtilitiesApplication",
+              "url": "https://the-surf-hero.csbrewed.com/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/favicon.svg" alt="CS Brewed Logo" class="brand-logo" width="36" height="36">
+                <div class="brand-text">
+                    <span class="brand-name">CS Brewed</span>
+                    <span class="brand-tagline">Apple Platform Apps</span>
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="mailto:serjios19@gmail.com" class="nav-btn">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="pill-badge">Indie Studio &bull; Swift &amp; SwiftUI</span>
+                <h1 class="hero-title">Handcrafted apps for everyday simplicity.</h1>
+                <p class="hero-lead">
+                    Thoughtfully designed, native applications for iOS and macOS. Built with purpose, respect for user privacy, and love for Apple platforms.
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">Explore Products</a>
+                    <a href="#about" class="btn btn-secondary">About the Developer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <span class="section-eyebrow">Portfolio</span>
+                <h2 class="section-title">Current Products</h2>
+                <p class="section-subtitle">Apps designed to do one thing exceptionally well.</p>
+            </div>
+
+            <div class="product-cards">
+                
+                <!-- Product 1: Teeth - Dental Journal -->
+                <article class="product-card" id="teeth">
+                    <div class="product-card-body">
+                        <div class="product-badge-group">
+                            <span class="badge badge-platform">iOS 18+</span>
+                            <span class="badge badge-category">Health &amp; Medical</span>
+                            <span class="badge badge-price">Free</span>
+                        </div>
+                        <div class="product-title-row">
+                            <img src="assets/teeth-icon.webp" alt="Teeth App Icon" class="product-icon" width="80" height="80" loading="lazy">
+                            <div>
+                                <h3 class="product-name">Teeth — Dental Journal</h3>
+                                <p class="product-tagline">Track your dental health history with ease</p>
+                            </div>
+                        </div>
+                        <p class="product-description">
+                            A personal dental companion for iPhone. Keep an organized timeline of your dental appointments, procedures, treatments, affected teeth, and reminders — all kept completely private on your device.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Detailed timeline of visits, cleanings, and procedures</span>
+                            </li>
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Specific tooth tracking with standard dental numbering</span>
+                            </li>
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>100% on-device data storage — zero tracking</span>
+                            </li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="https://teeth.csbrewed.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit Teeth Website &rarr;</a>
+                            <a href="https://apps.apple.com/us/app/teeth-dental-journal/id6753301026" class="btn btn-outline" target="_blank" rel="noopener">View on App Store</a>
+                        </div>
+                    </div>
+                    <div class="product-card-preview">
+                        <div class="device-frame">
+                            <img src="assets/teeth-screenshot-1.webp" alt="Teeth App Screenshot" class="preview-image" loading="lazy">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2: The Surf Hero -->
+                <article class="product-card" id="the-surf-hero">
+                    <div class="product-card-body">
+                        <div class="product-badge-group">
+                            <span class="badge badge-platform">macOS</span>
+                            <span class="badge badge-category">Productivity &amp; Utilities</span>
+                        </div>
+                        <div class="product-title-row">
+                            <img src="assets/surf-hero-icon.webp" alt="The Surf Hero App Icon" class="product-icon" width="80" height="80" loading="lazy">
+                            <div>
+                                <h3 class="product-name">The Surf Hero</h3>
+                                <p class="product-tagline">Default browser changer for macOS</p>
+                            </div>
+                        </div>
+                        <p class="product-description">
+                            A lightweight macOS menu bar utility that lets you switch your default browser in just a couple of clicks. Configure custom exception rules, assign shortcuts, and personalize your status bar experience.
+                        </p>
+                        <ul class="feature-list">
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Switch default browsers instantly from the macOS menu bar</span>
+                            </li>
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Set up custom exceptions for quick domain access</span>
+                            </li>
+                            <li>
+                                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Customizable status bar icon appearance</span>
+                            </li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="https://the-surf-hero.csbrewed.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit The Surf Hero Website &rarr;</a>
+                            <a href="https://apps.apple.com/ua/app/the-surf-hero/id6738626783" class="btn btn-outline" target="_blank" rel="noopener">View on Mac App Store</a>
+                        </div>
+                    </div>
+                    <div class="product-card-preview">
+                        <div class="device-frame mac-frame">
+                            <img src="assets/surf-hero-screenshot-1.webp" alt="The Surf Hero Screenshot" class="preview-image" loading="lazy">
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Values / Philosophy Section -->
+        <section id="philosophy" class="values-section">
+            <div class="section-header">
+                <span class="section-eyebrow">Principles</span>
+                <h2 class="section-title">Built the Indie Way</h2>
+                <p class="section-subtitle">Core principles behind every app brewed here.</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3>Privacy by Default</h3>
+                    <p>No analytics trackers, third-party advertising SDKs, or data harvesting. Your records and habits remain yours.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>Native &amp; Lightweight</h3>
+                    <p>Written 100% with Swift and SwiftUI. Fast launch times, minimal battery impact, and seamless system integration.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Focused Design</h3>
+                    <p>Each tool solves a specific problem cleanly without bloated menus, unnecessary friction, or forced subscriptions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Developer Section -->
+        <section id="about" class="about-section">
+            <div class="about-card">
+                <div class="about-content">
+                    <span class="section-eyebrow">Developer</span>
+                    <h2 class="about-title">Hi, I'm Serhii.</h2>
+                    <p class="about-text">
+                        I am an indie software engineer creating tools and utilities for iOS and macOS. 
+                        <strong>CS Brewed</strong> represents my independent workshop where ideas are turned into polished, useful applications that feel right at home in the Apple ecosystem.
+                    </p>
+                    <p class="about-text">
+                        Whether you need a reliable way to keep track of your dental health history or a quick way to switch default browsers on your Mac, these apps are built to deliver a delightful, calm experience.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://github.com/schornon" class="btn btn-outline" target="_blank" rel="noopener">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                            </svg>
+                            GitHub Profile
+                        </a>
+                        <a href="mailto:serjios19@gmail.com" class="btn btn-outline">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo-row">
+                    <img src="assets/favicon.svg" alt="CS Brewed" width="28" height="28">
+                    <span class="footer-title">CS Brewed</span>
+                </div>
+                <p class="footer-desc">Indie apps for iOS and macOS by Serhii Chornonoh.</p>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="https://teeth.csbrewed.com/">Teeth - Dental Journal</a></li>
+                        <li><a href="https://the-surf-hero.csbrewed.com/">The Surf Hero</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com/schornon" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="mailto:serjios19@gmail.com">Email Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Serhii Chornonoh. All rights reserved.</p>
+            <p class="footer-subtext">Apple, iPhone, and macOS are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
