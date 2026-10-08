@@ -1,24 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="mokaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#4AABF0" />
       <stop offset="100%" stop-color="#1A7FCC" />
     </linearGradient>
   </defs>
-
-  <!-- Background squircle -->
-  <rect width="64" height="64" rx="16" fill="url(#mokaBg)" />
-
-  <!-- Knob -->
-  <circle cx="31" cy="14" r="2" fill="#FFFFFF" />
-
-  <!-- Upper pot + spout -->
-  <path d="M21 18 L41 18 L37 31 L25 31 L21 22 L15 19 Z" fill="#FFFFFF" />
-
-  <!-- Lower boiler -->
-  <path d="M25 34 L37 34 L41 48 C41 49, 40 50, 39 50 L23 50 C22 50, 21 49, 21 48 Z" fill="#FFFFFF" />
-
-  <!-- Handle -->
-  <path d="M39.5 20 C45.5 20, 48 24.5, 45.5 30.5 C44 33.5, 40.5 34.5, 37 33.5" 
-        stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <!-- Small minimalist cup base -->
+  <path d="M22 41 L42 41 C42 41, 41 49, 32 49 C23 49, 22 41, 22 41 Z" fill="#FFFFFF" />
+  <path d="M41 43 C44 43, 45 46, 41 47" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M20 52 L44 52" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- 'C' steam ribbon (left) -->
+  <path d="M28 20 C24 20, 21 23, 21 27 C21 31, 24 34, 28 34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+  <!-- 'S' steam ribbon (right) -->
+  <path d="M39 20 C36 19, 33 21, 33 23 C33 26, 39 27, 39 30 C39 33, 36 34, 33 34" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
 </svg>
