@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B" />
+      <stop offset="50%" stop-color="#1C2541" />
+      <stop offset="100%" stop-color="#0A1128" />
+    </linearGradient>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4AABF0" />
+      <stop offset="100%" stop-color="#1A7FCC" />
+    </linearGradient>
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(74, 171, 240, 0.4)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Subtle glow circles -->
+  <circle cx="200" cy="150" r="280" fill="#258BD6" opacity="0.12" filter="blur(60px)" />
+  <circle cx="1000" cy="480" r="320" fill="#4AABF0" opacity="0.10" filter="blur(70px)" />
+
+  <!-- Main Card Container -->
+  <rect x="60" y="60" width="1080" height="510" rx="28" fill="rgba(255, 255, 255, 0.03)" stroke="url(#card-border)" stroke-width="1.5" />
+
+  <!-- Logo and Studio Header -->
+  <g transform="translate(120, 120)">
+    <!-- Logo Icon -->
+    <rect width="84" height="84" rx="22" fill="url(#logo-grad)" />
+    <!-- Cup Base -->
+    <path d="M29 54 L55 54 C55 54, 54 64, 42 64 C30 64, 29 54, 29 54 Z" fill="#FFFFFF" />
+    <path d="M54 57 C58 57, 59 61, 54 62" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M26 69 L58 69" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+    <!-- C steam -->
+    <path d="M37 27 C31 27, 28 31, 28 36 C28 41, 31 45, 37 45" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- S steam -->
+    <path d="M51 27 C47 25, 43 28, 43 31 C43 35, 51 36, 51 40 C51 44, 47 45, 43 45" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
+
+    <!-- Brand Name -->
+    <text x="110" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="800" font-size="38" fill="#FFFFFF" letter-spacing="-0.5">CS Brewed</text>
+    <text x="110" y="74" font-family="-apple-system, BlinkMacSystemFont, 'JetBrains Mono', monospace" font-weight="500" font-size="16" fill="#38BDF8" letter-spacing="1">NATIVE, SIMPLE, PRIVATE</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="120" y="275" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="800" font-size="52" fill="#FFFFFF" letter-spacing="-1">Native Apps for iOS &amp; macOS</text>
+  
+  <!-- Subheading -->
+  <text x="120" y="325" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="400" font-size="24" fill="#94A3B8">Thoughtful, privacy-first software built with Swift &amp; SwiftUI by Serhii Chornonoh.</text>
+
+  <!-- App Feature Badges -->
+  <g transform="translate(120, 380)">
+    <!-- App 1: Teeth -->
+    <rect x="0" y="0" width="270" height="76" rx="16" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">Teeth — Dental Journal</text>
+    <text x="24" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="500" font-size="14" fill="#38BDF8">iOS 18+ • Private Dental Tracker</text>
+
+    <!-- App 2: The Surf Hero -->
+    <rect x="290" y="0" width="270" height="76" rx="16" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <text x="314" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">The Surf Hero</text>
+    <text x="314" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="500" font-size="14" fill="#38BDF8">macOS • Default Browser Switcher</text>
+
+    <!-- App 3: Perespiv -->
+    <rect x="580" y="0" width="270" height="76" rx="16" fill="rgba(255, 255, 255, 0.06)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    <text x="604" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">Perespiv</text>
+    <text x="604" y="56" font-family="-apple-system, BlinkMacSystemFont, 'Nunito', sans-serif" font-weight="500" font-size="14" fill="#38BDF8">iOS 17+ • Reverse Singing Game</text>
+  </g>
+
+  <!-- Domain Tag Bottom Right -->
+  <text x="1010" y="525" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'JetBrains Mono', monospace" font-weight="500" font-size="18" fill="#64748B">csbrewed.com</text>
+</svg>
