@@ -859,10 +859,6 @@ a:hover {
         padding: 36px 28px;
     }
 
-    .product-card-preview {
-        order: -1;
-    }
-
     .screenshot-slider {
         max-width: 280px;
     }
