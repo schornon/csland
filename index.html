@@ -58,49 +58,193 @@
           "@id": "https://csbrewed.com/#website",
           "url": "https://csbrewed.com/",
           "name": "CS Brewed",
-          "description": "Indie Apple platform development studio by Serhii Chornonoh",
+          "alternateName": "CSBrewed",
+          "description": "Indie Apple development studio by Serhii Chornonoh. Crafting native, focused, and privacy-first Swift apps for iOS and macOS.",
           "publisher": {
-            "@type": "Person",
-            "name": "Serhii Chornonoh",
-            "url": "https://github.com/schornon"
+            "@id": "https://csbrewed.com/#organization"
           }
         },
         {
+          "@type": "Organization",
+          "@id": "https://csbrewed.com/#organization",
+          "name": "CS Brewed",
+          "url": "https://csbrewed.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://csbrewed.com/assets/icon-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "founder": {
+            "@type": "Person",
+            "@id": "https://csbrewed.com/#author",
+            "name": "Serhii Chornonoh",
+            "url": "https://github.com/schornon"
+          },
+          "sameAs": [
+            "https://github.com/schornon"
+          ]
+        },
+        {
           "@type": "ItemList",
+          "@id": "https://csbrewed.com/#products-list",
+          "name": "CS Brewed Native Applications",
           "itemListElement": [
             {
-              "@type": "SoftwareApplication",
+              "@type": "ListItem",
               "position": 1,
-              "name": "Teeth - Dental Journal",
-              "operatingSystem": "iOS 18.0 or later",
-              "applicationCategory": "HealthApplication",
-              "url": "https://teeth.csbrewed.com/",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
+              "item": {
+                "@type": "SoftwareApplication",
+                "@id": "https://teeth.csbrewed.com/#app",
+                "name": "Teeth — Dental Journal",
+                "operatingSystem": "iOS 18.0 or later",
+                "applicationCategory": "HealthApplication",
+                "applicationSubCategory": "Dental Tracker & Health Timeline",
+                "url": "https://teeth.csbrewed.com/",
+                "downloadUrl": "https://apps.apple.com/us/app/teeth-dental-journal/id6753301026",
+                "screenshot": [
+                  "https://csbrewed.com/assets/teeth-screenshot-1.webp",
+                  "https://csbrewed.com/assets/teeth-screenshot-2.webp",
+                  "https://csbrewed.com/assets/teeth-screenshot-3.webp",
+                  "https://csbrewed.com/assets/teeth-screenshot-4.webp",
+                  "https://csbrewed.com/assets/teeth-screenshot-5.webp"
+                ],
+                "author": {
+                  "@id": "https://csbrewed.com/#organization"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                "featureList": [
+                  "Complete timeline of visits, cleanings, and procedures",
+                  "Tooth tracking chart with standard dental numbering",
+                  "Private storage with secure personal iCloud backup — zero tracking"
+                ]
               }
             },
             {
-              "@type": "SoftwareApplication",
+              "@type": "ListItem",
               "position": 2,
-              "name": "Perespiv",
-              "operatingSystem": "iOS 17.0 or later",
-              "applicationCategory": "GameApplication",
-              "url": "https://apps.apple.com/ua/app/perespiv/id6738500826",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
+              "item": {
+                "@type": "SoftwareApplication",
+                "@id": "https://the-surf-hero.csbrewed.com/#app",
+                "name": "The Surf Hero",
+                "operatingSystem": "macOS Sonoma, Sequoia or later",
+                "applicationCategory": "UtilitiesApplication",
+                "applicationSubCategory": "Default Browser Switcher",
+                "url": "https://the-surf-hero.csbrewed.com/",
+                "downloadUrl": "https://apps.apple.com/ua/app/the-surf-hero/id6738626783",
+                "screenshot": [
+                  "https://csbrewed.com/assets/surf-hero-screenshot-1.webp",
+                  "https://csbrewed.com/assets/surf-hero-screenshot-2.webp",
+                  "https://csbrewed.com/assets/surf-hero-screenshot-3.webp"
+                ],
+                "author": {
+                  "@id": "https://csbrewed.com/#organization"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "2.99",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                "featureList": [
+                  "Switch default browsers instantly from macOS menu bar",
+                  "Custom exception rules for domain-specific routing",
+                  "Customizable status bar icon appearance"
+                ]
               }
             },
             {
-              "@type": "SoftwareApplication",
+              "@type": "ListItem",
               "position": 3,
-              "name": "The Surf Hero",
-              "operatingSystem": "macOS",
-              "applicationCategory": "UtilitiesApplication",
-              "url": "https://the-surf-hero.csbrewed.com/"
+              "item": {
+                "@type": "SoftwareApplication",
+                "@id": "https://csbrewed.com/#perespiv",
+                "name": "Perespiv — Sing, Parody & Guess",
+                "operatingSystem": "iOS 17.0 or later, iPadOS",
+                "applicationCategory": "GameApplication",
+                "applicationSubCategory": "Party & Music Game",
+                "url": "https://apps.apple.com/ua/app/perespiv/id6738500826",
+                "downloadUrl": "https://apps.apple.com/ua/app/perespiv/id6738500826",
+                "screenshot": [
+                  "https://csbrewed.com/assets/perespiv-screenshot-1.png",
+                  "https://csbrewed.com/assets/perespiv-screenshot-2.png",
+                  "https://csbrewed.com/assets/perespiv-screenshot-3.png",
+                  "https://csbrewed.com/assets/perespiv-screenshot-4.png"
+                ],
+                "author": {
+                  "@id": "https://csbrewed.com/#organization"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "USD",
+                  "availability": "https://schema.org/InStock"
+                },
+                "featureList": [
+                  "Record, reverse, and replay songs in vocal chunks",
+                  "Multiplayer party game for family and friends",
+                  "Universal app designed for iPhone and iPad"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://csbrewed.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is CS Brewed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CS Brewed is an independent Apple software workshop founded by developer Serhii Chornonoh. We build focused, native iOS and macOS applications with pure Swift and SwiftUI, centered on user privacy, lightweight performance, and intuitive design."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Teeth — Dental Journal protect and back up my health data?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Teeth stores your records on your iPhone and securely backs them up via your personal Apple iCloud account. Your dental appointments, treatment logs, affected tooth notes, and reminders are encrypted within your private iCloud storage so you never lose your data across devices. We never operate proprietary servers or third-party databases, require no user accounts, and use zero advertising or analytics tracking SDKs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does The Surf Hero switch default browsers on macOS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Surf Hero lives quietly in your macOS menu bar. It uses native macOS system APIs to instantly switch your default browser between Safari, Chrome, Firefox, Arc, Brave, and others with a single click or keyboard shortcut. You can also configure domain-specific exception rules to always open work or personal links in dedicated browsers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are CS Brewed apps subscription-based or one-time purchases?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We believe in honest software without predatory subscriptions. Teeth and Perespiv offer generous core features free with no ads. The Surf Hero is available for a simple one-time payment of $2.99 with no recurring subscriptions, ever."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which operating system versions are supported?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Teeth — Dental Journal is designed for iOS 18.0 and later on iPhone. Perespiv supports iOS 17.0 and later on iPhone and iPad. The Surf Hero supports macOS Sonoma, macOS Sequoia, and newer Apple Silicon & Intel Macs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I suggest a feature or report an issue?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Feedback and ideas directly shape future updates! Feel free to email serjios19@gmail.com or connect via GitHub at github.com/schornon."
+              }
             }
           ]
         }
@@ -123,6 +267,7 @@
             <div class="nav-links">
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="mailto:serjios19@gmail.com" class="nav-btn">Contact</a>
             </div>
@@ -136,7 +281,7 @@
                 <span class="pill-badge">Indie Studio &bull; Swift &amp; SwiftUI</span>
                 <h1 class="hero-title">Handcrafted apps for everyday simplicity.</h1>
                 <p class="hero-lead">
-                    Thoughtfully designed, native applications for iOS and macOS. Built with purpose, respect for user privacy, and love for Apple platforms.
+                    Thoughtfully designed, native Swift applications for iOS and macOS. Built with purpose, respect for user privacy, and crafted for Apple platforms.
                 </p>
                 <div class="hero-actions">
                     <a href="#products" class="btn btn-primary">Explore Products</a>
@@ -189,7 +334,7 @@
                                 <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>100% on-device data storage — zero tracking</span>
+                                <span>Private storage with secure personal iCloud backup — zero tracking</span>
                             </li>
                         </ul>
                         <div class="product-actions">
@@ -294,6 +439,7 @@
                         <div class="product-badge-group">
                             <span class="badge badge-platform">macOS</span>
                             <span class="badge badge-category">Productivity &amp; Utilities</span>
+                            <span class="badge badge-price">$2.99 One-Time</span>
                         </div>
                         <div class="product-title-row">
                             <img src="assets/surf-hero-icon.webp" alt="The Surf Hero App Icon" class="product-icon" width="80" height="80" loading="lazy">
@@ -327,7 +473,7 @@
                         </ul>
                         <div class="product-actions">
                             <a href="https://the-surf-hero.csbrewed.com/" class="btn btn-primary" target="_blank" rel="noopener">Visit The Surf Hero Website &rarr;</a>
-                            <a href="https://apps.apple.com/ua/app/the-surf-hero/id6738626783" class="btn btn-outline" target="_blank" rel="noopener">View on Mac App Store</a>
+                            <a href="https://apps.apple.com/ua/app/the-surf-hero/id6738626783" class="btn btn-outline" target="_blank" rel="noopener">Buy on Mac App Store — $2.99</a>
                         </div>
                     </div>
                     <div class="product-card-preview">
@@ -393,6 +539,88 @@
             </div>
         </section>
 
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <span class="section-eyebrow">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about CS Brewed apps, privacy, and Apple platform compatibility.</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        <span>What is CS Brewed?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>CS Brewed is an independent Apple software workshop founded by developer Serhii Chornonoh. We build focused, native iOS and macOS applications with pure Swift and SwiftUI, centered on user privacy, lightweight performance, and intuitive design.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How does Teeth — Dental Journal protect and back up my health data?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Teeth stores your records on your iPhone and securely backs them up via your personal Apple iCloud account. Your dental appointments, treatment logs, affected tooth notes, and reminders are encrypted within your private iCloud storage so you never lose your data across devices. We never operate proprietary servers or third-party databases, require no user accounts, and use zero advertising or analytics tracking SDKs.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How does The Surf Hero switch default browsers on macOS?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Surf Hero lives quietly in your macOS menu bar. It uses native macOS system APIs to instantly switch your default browser between Safari, Chrome, Firefox, Arc, Brave, and others with a single click or keyboard shortcut. You can also configure domain-specific exception rules to always open work or personal links in dedicated browsers.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Are CS Brewed apps subscription-based or one-time purchases?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>We believe in honest, transparent software without predatory subscriptions. Teeth and Perespiv offer generous core features free with no ads. The Surf Hero is available for a simple, one-time payment of $2.99 with no recurring subscriptions or hidden fees, ever.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Which operating system versions are supported?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Teeth — Dental Journal is designed for iOS 18.0 and later on iPhone. Perespiv supports iOS 17.0 and later on iPhone and iPad. The Surf Hero supports macOS Sonoma, macOS Sequoia, and newer Apple Silicon &amp; Intel Macs.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>How can I suggest a feature or report an issue?</span>
+                        <svg class="faq-icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Feedback and ideas directly shape future updates! Feel free to email <a href="mailto:serjios19@gmail.com">serjios19@gmail.com</a> or connect via GitHub at <a href="https://github.com/schornon" target="_blank" rel="noopener">github.com/schornon</a>.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
         <!-- About Developer Section -->
         <section id="about" class="about-section">
             <div class="about-card">
@@ -436,6 +664,15 @@
                 <p class="footer-desc">Indie apps for iOS and macOS by Serhii Chornonoh.</p>
             </div>
             <div class="footer-nav">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#philosophy">Principles</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
                 <div class="footer-col">
                     <h4>Products</h4>
                     <ul>

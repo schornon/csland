@@ -1,0 +1,30 @@
+# CS Brewed
+
+> Indie Apple software development studio by Serhii Chornonoh. Handcrafting native, focused, and privacy-first applications for iOS and macOS using Swift and SwiftUI.
+
+- Website: https://csbrewed.com/
+- Developer: Serhii Chornonoh (https://github.com/schornon)
+- Philosophy: Private on-device data storage with secure personal iCloud backup, zero analytics or advertising trackers, lightweight native performance.
+
+## Featured Applications
+
+### Teeth — Dental Journal
+- Platform: iOS 18.0 or later (iPhone)
+- Website: https://teeth.csbrewed.com/
+- App Store: https://apps.apple.com/us/app/teeth-dental-journal/id6753301026
+- Category: Health & Medical / Personal Dental Health Journal
+- Description: A private dental companion for iPhone. Keep an organized timeline of dental appointments, cleanings, procedures, affected tooth notes (using standard dental notation), and visit reminders. Private on-device storage with secure personal iCloud sync and zero third-party tracking.
+
+### The Surf Hero
+- Platform: macOS (Sonoma, Sequoia, and later)
+- Price: $2.99 (one-time purchase, no subscriptions)
+- Website: https://the-surf-hero.csbrewed.com/
+- Mac App Store: https://apps.apple.com/ua/app/the-surf-hero/id6738626783
+- Category: Productivity & Utilities / Default Browser Switcher
+- Description: A lightweight macOS menu bar utility to switch system default browsers in a couple of clicks or via keyboard shortcuts. Supports custom domain routing rules to open specific URLs in designated browsers.
+
+### Perespiv — Sing, Parody & Guess
+- Platform: iOS 17.0 or later (iPhone & iPad)
+- App Store: https://apps.apple.com/ua/app/perespiv/id6738500826
+- Category: Party Game / Music & Reverse Singing
+- Description: An interactive party game where players record short vocal segments of songs, reverse the audio, challenge friends to imitate the backward track, and guess the original song.
