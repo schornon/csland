@@ -181,8 +181,27 @@
                         </div>
                     </div>
                     <div class="product-card-preview">
-                        <div class="device-frame">
-                            <img src="assets/teeth-screenshot-1.webp" alt="Teeth App Screenshot" class="preview-image" loading="lazy">
+                        <div class="screenshot-slider" data-autoplay="3500">
+                            <div class="device-frame">
+                                <div class="slider-viewport">
+                                    <div class="slider-track">
+                                        <div class="slide"><img src="assets/teeth-screenshot-1.webp" alt="Teeth App - Complete Dental History" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/teeth-screenshot-2.webp" alt="Teeth App - Tooth Tracking Chart" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/teeth-screenshot-3.webp" alt="Teeth App - Appointment Reminders" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/teeth-screenshot-4.webp" alt="Teeth App - Dental Procedures" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/teeth-screenshot-5.webp" alt="Teeth App - Treatment Insights" class="preview-image" loading="lazy"></div>
+                                    </div>
+                                </div>
+                                <button class="slider-arrow prev" aria-label="Previous screenshot" type="button">&#8249;</button>
+                                <button class="slider-arrow next" aria-label="Next screenshot" type="button">&#8250;</button>
+                            </div>
+                            <div class="slider-dots" role="tablist" aria-label="Teeth screenshots">
+                                <button class="slider-dot active" aria-label="Screenshot 1" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 2" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 3" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 4" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 5" type="button"></button>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -230,8 +249,23 @@
                         </div>
                     </div>
                     <div class="product-card-preview">
-                        <div class="device-frame mac-frame">
-                            <img src="assets/surf-hero-screenshot-1.webp" alt="The Surf Hero Screenshot" class="preview-image" loading="lazy">
+                        <div class="screenshot-slider mac-slider" data-autoplay="3500">
+                            <div class="device-frame mac-frame">
+                                <div class="slider-viewport">
+                                    <div class="slider-track">
+                                        <div class="slide"><img src="assets/surf-hero-screenshot-1.webp" alt="The Surf Hero - Change Default Browser" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/surf-hero-screenshot-2.webp" alt="The Surf Hero - Quick Access and Exceptions" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/surf-hero-screenshot-3.webp" alt="The Surf Hero - Status Bar Personalization" class="preview-image" loading="lazy"></div>
+                                    </div>
+                                </div>
+                                <button class="slider-arrow prev" aria-label="Previous screenshot" type="button">&#8249;</button>
+                                <button class="slider-arrow next" aria-label="Next screenshot" type="button">&#8250;</button>
+                            </div>
+                            <div class="slider-dots" role="tablist" aria-label="The Surf Hero screenshots">
+                                <button class="slider-dot active" aria-label="Screenshot 1" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 2" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 3" type="button"></button>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -279,8 +313,25 @@
                         </div>
                     </div>
                     <div class="product-card-preview">
-                        <div class="device-frame">
-                            <img src="assets/perespiv-screenshot-1.png" alt="Perespiv App Screenshot" class="preview-image" loading="lazy">
+                        <div class="screenshot-slider" data-autoplay="3500">
+                            <div class="device-frame">
+                                <div class="slider-viewport">
+                                    <div class="slider-track">
+                                        <div class="slide"><img src="assets/perespiv-screenshot-1.png" alt="Perespiv - Reverse Song Singing" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/perespiv-screenshot-2.png" alt="Perespiv - Imitate the Parody" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/perespiv-screenshot-3.png" alt="Perespiv - Guess the Original Track" class="preview-image" loading="lazy"></div>
+                                        <div class="slide"><img src="assets/perespiv-screenshot-4.png" alt="Perespiv - Family and Friends Fun" class="preview-image" loading="lazy"></div>
+                                    </div>
+                                </div>
+                                <button class="slider-arrow prev" aria-label="Previous screenshot" type="button">&#8249;</button>
+                                <button class="slider-arrow next" aria-label="Next screenshot" type="button">&#8250;</button>
+                            </div>
+                            <div class="slider-dots" role="tablist" aria-label="Perespiv screenshots">
+                                <button class="slider-dot active" aria-label="Screenshot 1" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 2" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 3" type="button"></button>
+                                <button class="slider-dot" aria-label="Screenshot 4" type="button"></button>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -392,5 +443,140 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = document.querySelectorAll('.screenshot-slider');
+
+            sliders.forEach((slider) => {
+                const track = slider.querySelector('.slider-track');
+                const slides = slider.querySelectorAll('.slide');
+                const dots = slider.querySelectorAll('.slider-dot');
+                const prevBtn = slider.querySelector('.slider-arrow.prev');
+                const nextBtn = slider.querySelector('.slider-arrow.next');
+                const totalSlides = slides.length;
+                if (totalSlides <= 1) return;
+
+                let currentIndex = 0;
+                let timer = null;
+                const interval = parseInt(slider.dataset.autoplay, 10) || 3500;
+                let isPaused = false;
+                let isIntersecting = false;
+
+                function goToSlide(index) {
+                    currentIndex = (index + totalSlides) % totalSlides;
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentIndex);
+                        dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+                    });
+                }
+
+                function nextSlide() {
+                    goToSlide(currentIndex + 1);
+                }
+
+                function prevSlide() {
+                    goToSlide(currentIndex - 1);
+                }
+
+                function startAutoplay() {
+                    stopAutoplay();
+                    if (!isPaused && isIntersecting) {
+                        timer = setInterval(nextSlide, interval);
+                    }
+                }
+
+                function stopAutoplay() {
+                    if (timer) {
+                        clearInterval(timer);
+                        timer = null;
+                    }
+                }
+
+                // Controls
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        prevSlide();
+                        startAutoplay();
+                    });
+                }
+
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        nextSlide();
+                        startAutoplay();
+                    });
+                }
+
+                dots.forEach((dot, i) => {
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        goToSlide(i);
+                        startAutoplay();
+                    });
+                });
+
+                // Pause on hover
+                slider.addEventListener('mouseenter', () => {
+                    isPaused = true;
+                    stopAutoplay();
+                });
+
+                slider.addEventListener('mouseleave', () => {
+                    isPaused = false;
+                    startAutoplay();
+                });
+
+                // Touch swipe support
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                slider.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                    isPaused = true;
+                    stopAutoplay();
+                }, { passive: true });
+
+                slider.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    const diff = touchStartX - touchEndX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff > 0) nextSlide();
+                        else prevSlide();
+                    }
+                    isPaused = false;
+                    startAutoplay();
+                }, { passive: true });
+
+                // Visibility & viewport awareness
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            isIntersecting = entry.isIntersecting;
+                            if (isIntersecting) {
+                                startAutoplay();
+                            } else {
+                                stopAutoplay();
+                            }
+                        });
+                    }, { threshold: 0.2 });
+                    observer.observe(slider);
+                } else {
+                    isIntersecting = true;
+                    startAutoplay();
+                }
+
+                document.addEventListener('visibilitychange', () => {
+                    if (document.hidden) {
+                        stopAutoplay();
+                    } else if (isIntersecting && !isPaused) {
+                        startAutoplay();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

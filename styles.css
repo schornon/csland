@@ -474,43 +474,167 @@ a:hover {
     margin-top: 8px;
 }
 
-/* Device Preview */
+/* Device Preview & Screenshot Slider */
 .product-card-preview {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.screenshot-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+}
+
+.screenshot-slider.mac-slider {
+    max-width: 375px;
 }
 
 .device-frame {
     background: #F1F5F9;
     border: 1px solid var(--border-light);
-    border-radius: 24px;
-    padding: 12px;
+    border-radius: 28px;
+    padding: 10px;
     box-shadow: var(--shadow-md);
-    max-width: 300px;
-    transition: transform 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .device-frame:hover {
-    transform: scale(1.02);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .device-frame.mac-frame {
-    max-width: 360px;
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 8px;
 }
 
-.preview-image {
+.slider-viewport {
+    overflow: hidden;
+    border-radius: 20px;
     width: 100%;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: var(--shadow-sm);
-    object-fit: cover;
+    position: relative;
+    touch-action: pan-y pinch-zoom;
 }
 
-.mac-frame .preview-image {
+.mac-frame .slider-viewport {
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.mac-frame .slide {
+    height: 235px;
+    background: #FFFFFF;
+}
+
+.mac-frame .slide img {
     border-radius: 8px;
+    max-height: 235px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Slider navigation arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--text-primary);
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 0 0 2px 0;
+}
+
+.device-frame:hover .slider-arrow,
+.device-frame:focus-within .slider-arrow {
+    opacity: 1;
+}
+
+.slider-arrow.prev { left: 14px; }
+.slider-arrow.next { right: 14px; }
+
+.slider-arrow:hover {
+    background: #FFFFFF;
+    color: var(--accent);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Slider dots indicator */
+.slider-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #CBD5E1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    padding: 0;
+}
+
+.slider-dot:hover {
+    background: #94A3B8;
+}
+
+.slider-dot.active {
+    background: var(--accent);
+    width: 22px;
 }
 
 /* --------------------------------------------------------------------------
@@ -739,12 +863,16 @@ a:hover {
         order: -1;
     }
 
-    .device-frame {
-        max-width: 240px;
+    .screenshot-slider {
+        max-width: 280px;
     }
 
-    .device-frame.mac-frame {
-        max-width: 320px;
+    .screenshot-slider.mac-slider {
+        max-width: 350px;
+    }
+
+    .slider-arrow {
+        opacity: 0.85; /* Keep visible on touch / tablet */
     }
 
     .values-grid {
@@ -764,6 +892,22 @@ a:hover {
 @media (max-width: 640px) {
     :root {
         --header-height: 64px;
+    }
+
+    .screenshot-slider {
+        max-width: 250px;
+    }
+
+    .screenshot-slider.mac-slider {
+        max-width: 310px;
+    }
+
+    .mac-frame .slide {
+        height: 190px;
+    }
+
+    .mac-frame .slide img {
+        max-height: 190px;
     }
 
     .nav-links .nav-link {
